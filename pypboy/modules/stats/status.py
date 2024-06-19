@@ -42,6 +42,6 @@ class Health(game.Entity):
 		self.image = pygame.image.load(config.PIPBOY_IMAGE_PATH)
 		self.rect = self.image.get_rect()
 		self.image = self.image.convert()
-		text = config.FONTS[18].render("Grieve - Level 27", True, (105, 251, 187), (0, 0, 0))
+		text = config.FONTS[18].render(config.CHARACTER_NAME + " - Level 27", True, (105, 251, 187), (0, 0, 0))
 		text_width = text.get_size()[0]
 		self.image.blit(text, (config.WIDTH / 2 - 8 - text_width / 2, 250))

@@ -1,5 +1,7 @@
 import pygame
 
+CHARACTER_NAME = "Grieve"
+
 # Settings for 2.8 inch screen
 WIDTH = 320
 HEIGHT = 240
@@ -8,11 +10,11 @@ OVERLAY_IMAGE_PATH = "images/overlay320.png"
 BORDER_IMAGE_PATH = "images/border320.png"
 
 # Settings for 3.5 inch screen
-#WIDTH = 480
-#HEIGHT = 320
-#PIPBOY_IMAGE_PATH = "images/pipboy.png"
-#OVERLAY_IMAGE_PATH = "images/overlay.png"
-#BORDER_IMAGE_PATH = "images/border.png"
+# WIDTH = 480
+# HEIGHT = 320
+# PIPBOY_IMAGE_PATH = "images/pipboy.png"
+# OVERLAY_IMAGE_PATH = "images/overlay.png"
+# BORDER_IMAGE_PATH = "images/border.png"
 
 # OUTPUT_WIDTH = 320
 # OUTPUT_HEIGHT = 240
