@@ -1,10 +1,17 @@
 import pygame
 
-WIDTH = 320
-HEIGHT = 240
+# Settings for 2.8 inch screen
+#WIDTH = 320
+#HEIGHT = 240
+
+# Settings for 3.5 inch screen
+WIDTH = 480
+HEIGHT = 320
 
 # OUTPUT_WIDTH = 320
 # OUTPUT_HEIGHT = 240
+
+GPIO_AVAILABLE = False
 
 #MAP_FOCUS = (-5.9347681, 54.5889076)
 MAP_FOCUS = (-102.3016145, 21.8841274)

@@ -3,7 +3,6 @@ import config
 import pygame
 import datetime
 
-
 class Header(game.Entity):
 
 	def __init__(self, headline="", title=""):
@@ -35,7 +34,7 @@ class Header(game.Entity):
 			self._date = new_date
 
 		super(Header, self).update(*args, **kwargs)
-
+  
 
 class Footer(game.Entity):
 
