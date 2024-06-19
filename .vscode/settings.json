@@ -5,6 +5,7 @@
         "KEYDOWN",
         "mapgrid",
         "monofonto",
+        "PIPBOY",
         "pygame",
         "Pypboy",
         "Scanlines",

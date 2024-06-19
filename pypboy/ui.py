@@ -151,7 +151,7 @@ class Scanlines(game.Entity):
 
 class Overlay(game.Entity):
 	def __init__(self):
-		self.image = pygame.image.load('images/overlay.png')
+		self.image = pygame.image.load(config.OVERLAY_IMAGE_PATH)
 		super(Overlay, self).__init__((config.WIDTH, config.HEIGHT))
 		self.blit_alpha(self, self.image, (0, 0), 128)
 
@@ -168,5 +168,5 @@ class Overlay(game.Entity):
 class Border(game.Entity):
 	def __init__(self):
 		super(Border, self).__init__()
-		self.image = pygame.image.load('images/border.png')
+		self.image = pygame.image.load(config.BORDER_IMAGE_PATH)
 		self.rect = self.image.get_rect()
