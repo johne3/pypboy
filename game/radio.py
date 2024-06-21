@@ -70,23 +70,23 @@ class Radio(game.Entity):
 		if self.osc:
 			self.blit(self.osc.screen, (550, 150))
             
-            metadata = mutagen.File(filename, easy = True)
+			metadata = mutagen.File(filename, easy = True)
 			
 		selectFont = pygame.font.Font('monofonto.ttf', 24)
 		basicFont = pygame.font.Font('monofonto.ttf', 22)
         
-        text = selectFont.render(game.Entity.name, True, (105, 251, 187), (0, 0, 0))
+		text = selectFont.render(game.Entity.name, True, (105, 251, 187), (0, 0, 0))
         
 		#text = selectFont.render(" -   Random Play Radio ", True, (105, 251, 187), (0, 0, 0))
 		
-        self.blit(text, (75, 75))
+		self.blit(text, (75, 75))
 		text = basicFont.render("  'r' selects a random song ", True, (105, 251, 187), (0, 0, 0))
 		self.blit(text, (75, 100))
 		text = basicFont.render("  'p' to play   's' to stop ", True, (105, 251, 187), (0, 0, 0))
 		self.blit(text, (75, 120))
 		
 		if self.filename:
-            text = selectFont.render(" %s " % metadata["ARTIST"] + ' - ' + metadata["TITLE"], True, (105, 251, 187), (0, 0, 0))
+			text = selectFont.render(" %s " % metadata["ARTIST"] + ' - ' + metadata["TITLE"], True, (105, 251, 187), (0, 0, 0))
             
 			#text = selectFont.render(u" %s " % self.filename[self.filename.rfind(os.sep)+1:], True, (105, 251, 187), (0, 0, 0))
 			self.blit(text, (75, 200))
@@ -163,8 +163,8 @@ class Oscilloscope:
 			pygame.surfarray.blit_array(self.screen, pixels)	 # Blit the screen buffer
 			if not self.embedded:
 				pygame.display.flip()  
-		except Exception,e:
-			print traceback.format_exc()
+		except Exception as e:
+			print(traceback.format_exc())
 
 def play_pygame(file):
 	
@@ -217,5 +217,5 @@ if __name__ == "__main__":
 		files = load_files()
 		if files:
 			play_pygame(files[randint(0,len(files)-1)])
-	except Exception, e:
-		print traceback.format_exc()
+	except Exception as e:
+		print(traceback.format_exc())
