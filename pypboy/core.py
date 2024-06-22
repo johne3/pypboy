@@ -37,17 +37,18 @@ class Pypboy(game.core.Engine):
         
     def init_modules(self):
         self.modules = {
-			"data": data.Module(self),
+			#"data": data.Module(self),
 			"items": items.Module(self),
 			"stats": stats.Module(self)
 		}
+        
         for module in self.modules.values():
             module.move(4, 40)
         self.switch_module("stats")
     
     def init_gpio_controls(self):
         for pin in config.GPIO_ACTIONS.keys():
-            print("Intialising pin %s as action '%s'" % (pin, config.GPIO_ACTIONS[pin]))
+            print("Initializing pin %s as action '%s'" % (pin, config.GPIO_ACTIONS[pin]))
             GPIO.setup(pin, GPIO.IN)
             self.gpio_actions[pin] = config.GPIO_ACTIONS[pin]	
     
