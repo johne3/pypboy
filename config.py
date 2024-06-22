@@ -31,7 +31,7 @@ EVENTS = {
 ACTIONS = {
 	pygame.K_F1: "module_stats",
 	pygame.K_F2: "module_items",
-	pygame.K_F3: "module_data",
+	#pygame.K_F3: "module_data",
 	pygame.K_1:	"knob_1",
 	pygame.K_2: "knob_2",
 	pygame.K_3: "knob_3",
