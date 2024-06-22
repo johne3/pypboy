@@ -37,8 +37,8 @@ class Pypboy(game.core.Engine):
         
     def init_modules(self):
         self.modules = {
-			#"data": data.Module(self),
-			#"items": items.Module(self),
+			"data": data.Module(self),
+			"items": items.Module(self),
 			"stats": stats.Module(self)
 		}
         
@@ -88,13 +88,11 @@ class Pypboy(game.core.Engine):
                 self.active.handle_action(action)
     
     def handle_event(self, event):
-        print("Handling Event: " + str(event.type))
         if event.type == pygame.KEYDOWN:
             if (event.key == pygame.K_ESCAPE):
                 self.running = False
             else:
                 if event.key in config.ACTIONS:
-                    print("Handling Action: " + config.ACTIONS[event.key])
                     self.handle_action(config.ACTIONS[event.key])
         elif event.type == pygame.QUIT:
             self.running = False
