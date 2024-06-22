@@ -38,7 +38,7 @@ class Pypboy(game.core.Engine):
     def init_modules(self):
         self.modules = {
 			#"data": data.Module(self),
-			"items": items.Module(self),
+			#"items": items.Module(self),
 			"stats": stats.Module(self)
 		}
         
