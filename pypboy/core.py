@@ -88,8 +88,7 @@ class Pypboy(game.core.Engine):
                 self.active.handle_action(action)
     
     def handle_event(self, event):
-        print("Handling Event: " + event.type)
-        
+        print("Handling Event: " + str(event.type))
         if event.type == pygame.KEYDOWN:
             if (event.key == pygame.K_ESCAPE):
                 self.running = False
