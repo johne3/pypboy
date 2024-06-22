@@ -104,6 +104,8 @@ class Pypboy(game.core.Engine):
                 self.active.handle_event(event)
     
     def run(self):
+        pygame.mouse.set_visible(False)
+        
         self.running = True
         while self.running:
             for event in pygame.event.get():
