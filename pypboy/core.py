@@ -44,6 +44,7 @@ class Pypboy(game.core.Engine):
         
         for module in self.modules.values():
             module.move(4, 40)
+            
         self.switch_module("stats")
     
     def init_gpio_controls(self):
@@ -87,11 +88,14 @@ class Pypboy(game.core.Engine):
                 self.active.handle_action(action)
     
     def handle_event(self, event):
+        print("Handling Event: " + event.type)
+        
         if event.type == pygame.KEYDOWN:
             if (event.key == pygame.K_ESCAPE):
                 self.running = False
             else:
                 if event.key in config.ACTIONS:
+                    print("Handling Action: " + config.ACTIONS[event.key])
                     self.handle_action(config.ACTIONS[event.key])
         elif event.type == pygame.QUIT:
             self.running = False
