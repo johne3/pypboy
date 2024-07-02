@@ -8,15 +8,13 @@ import os
 # os.putenv('SDL_MOUSEDRV'   , 'TSLIB')
 # os.putenv('SDL_MOUSEDEV'   , '/dev/input/touchscreen')
 
-# try:
-#     import RPi.GPIO as GPIO
-#     GPIO.setmode(GPIO.BCM)
-#     config.GPIO_AVAILABLE = True
-# except Exception as e:
-#     print ("GPIO UNAVAILABLE (%s)" % e)
-#     config.GPIO_AVAILABLE = False
-    
-config.GPIO_AVAILABLE = False
+try:
+    import RPi.GPIO as GPIO
+    GPIO.setmode(GPIO.BCM)
+    config.GPIO_AVAILABLE = True
+except Exception as e:
+    print ("GPIO UNAVAILABLE (%s)" % e)
+    config.GPIO_AVAILABLE = False
 
 from pypboy.core import Pypboy
 
