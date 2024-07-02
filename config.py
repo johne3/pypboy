@@ -31,7 +31,7 @@ EVENTS = {
 ACTIONS = {
 	pygame.K_F1: "module_stats",
 	pygame.K_F2: "module_items",
-	pygame.K_F3: "module_data",
+	#pygame.K_F3: "module_data",
 	pygame.K_1:	"knob_1",
 	pygame.K_2: "knob_2",
 	pygame.K_3: "knob_3",
@@ -45,7 +45,7 @@ ACTIONS = {
 GPIO_ACTIONS = {
     4: "module_stats", #GPIO 4
 	14: "module_items", #GPIO 14
-	15: "module_data", #GPIO 15
+	#15: "module_data", #GPIO 15
 	17:	"knob_1", #GPIO 17
 	18: "knob_2", #GPIO 18
 	7: "knob_3", #GPIO 7
