@@ -4,7 +4,7 @@ import game
 import game.core
 import pypboy.ui
 
-#from pypboy.modules import data
+from pypboy.modules import data
 from pypboy.modules import items
 from pypboy.modules import stats
 
@@ -37,7 +37,7 @@ class Pypboy(game.core.Engine):
         
     def init_modules(self):
         self.modules = {
-			#"data": data.Module(self),
+			"data": data.Module(self),
 			"items": items.Module(self),
 			"stats": stats.Module(self)
 		}
@@ -77,8 +77,8 @@ class Pypboy(game.core.Engine):
             self.active.parent = self
             self.active.handle_action("resume")
             self.add(self.active)
-        #else:
-            #print("Module '%s' not implemented." % module)
+        else:
+            print("Module '%s' not implemented." % module)
     
     def handle_action(self, action):
         if action.startswith('module_'):
